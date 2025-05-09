@@ -1,43 +1,52 @@
-"use strict"
-let isOn=false;
-let cont=0;
+"use strict";
 
-function useCont(){
-    isOn=!isOn;
-    let labelCont=document.getElementById("cont");
-    let buttonCont=document.getElementById("button_cont");
-    labelCont.innerText=cont; //Aggiorno la scritta
+let isOn = false;
+let cont = 0;
+let idTimer = null;  // Variabile per tenere traccia dell'intervallo
 
-    if(isOn){
-        buttonCont.innerText="Stop";
-        while(isOn){
-            setInterval(aggCont(labelCont),1000);
-        }
-    }else{
-        buttonCont.innerText="Avvia";
-    }
-}
+// Funzione per avviare o fermare il contatore
+function useCont() {
+    let labelCont = document.getElementById("cont");
+    let buttonCont = document.getElementById("button_cont");
+    
+    // Cambia lo stato del contatore (avvia/ferma)
+    isOn = !isOn;
+    
+    labelCont.innerText = cont; // Aggiorna la visualizzazione del contatore
 
-function azz(){
-    cont=0;
-}
-
-function aggCont(labelCont){
-    cont++;
-    if(cont==10){ //Evento immagine e reset
-        cont=0;
-        //Immagine
-        imgView(true);
-        setTimeout(imgView(false),3000);
-    } 
-    labelCont.innerText=cont;
-}
-
-function imgView(isVisible){
-    let divImg=document.getElementById("div_img");
-    if(isVisible){
-        divImg.visibility="visible";
+    if (isOn) {
+        buttonCont.innerText = "Stop";  // Cambia il testo del pulsante
+        idTimer = setInterval(() => aggCont(labelCont), 1000);  // Avvia l'incremento del contatore ogni secondo
     } else {
-        divImg.visibility="hidden";
+        buttonCont.innerText = "Avvia";  // Cambia il testo del pulsante
+        clearInterval(idTimer);  // Ferma l'incremento del contatore
     }
+}
+
+// Funzione per azzerare il contatore
+function azz() {
+    cont = 0;
+    document.getElementById("cont").innerText = cont; // Mostra il contatore azzerato
+    clearInterval(idTimer);  // Ferma il contatore
+    document.getElementById("button_cont").innerText = "Avvia";  // Riporta il pulsante a "Avvia"
+    isOn = false;  // Il contatore è fermo
+}
+
+// Funzione per aggiornare il contatore
+function aggCont(labelCont) {
+    cont++;
+    
+    if (cont === 10) {  // Se il contatore raggiunge 10
+        cont = 0;  // Resetta il contatore
+        imgView(true);  // Mostra l'immagine
+        setTimeout(() => imgView(false), 3000);  // Nascondi l'immagine dopo 3 secondi
+    }
+    
+    labelCont.innerText = cont;  // Aggiorna la visualizzazione del contatore
+}
+
+// Funzione per cambiare la visibilità dell'immagine
+function imgView(isVisible) {
+    let divImg = document.getElementById("div_img");
+    divImg.style.visibility = isVisible ? "visible" : "hidden";  // Imposta la visibilità
 }
