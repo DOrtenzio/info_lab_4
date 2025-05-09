@@ -16,9 +16,11 @@ function useCont() {
 
     if (isOn) {
         buttonCont.innerText = "Stop";  // Cambia il testo del pulsante
+        buttonCont.style.backgroundColor = "#f44336"; 
         idTimer = setInterval(() => aggCont(labelCont), 1000);  // Avvia l'incremento del contatore ogni secondo
     } else {
         buttonCont.innerText = "Avvia";  // Cambia il testo del pulsante
+        buttonCont.style.backgroundColor = "#4CAF50";
         clearInterval(idTimer);  // Ferma l'incremento del contatore
     }
 }
@@ -28,7 +30,9 @@ function azz() {
     cont = 0;
     document.getElementById("cont").innerText = cont; // Mostra il contatore azzerato
     clearInterval(idTimer);  // Ferma il contatore
-    document.getElementById("button_cont").innerText = "Avvia";  // Riporta il pulsante a "Avvia"
+    
+    document.getElementById("button_cont").innerText = "Avvia"; 
+    document.getElementById("button_cont").style.backgroundColor = "#4CAF50";
     isOn = false;  // Il contatore è fermo
 }
 
