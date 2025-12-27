@@ -1,1 +1,0 @@
-# s-frontend-javaFx-calcolatriceComplessa-info

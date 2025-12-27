@@ -1,2 +1,0 @@
-# EsercitazioneArray100
-EsercitazioneArray100
