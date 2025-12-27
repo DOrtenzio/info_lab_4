@@ -3,14 +3,23 @@
 # --- CONFIGURAZIONE ---
 # Inserisci qui gli URL delle repository che vuoi accorpare
 REPOS=(
-    "https://github.com/DOrtenzio/s-frontend-java-arrayStringhe-infoLab.git"
-    "https://github.com/DOrtenzio/s-frontend-java-array01-infoLab.git"
-    "https://github.com/DOrtenzio/s-frontend-java-array-infoLab.git"
-    "https://github.com/DOrtenzio/s-frontend-java-funzioni04-infoTeoria.git"
-    "https://github.com/DOrtenzio/s-frontend-java-matrici-infoTeoria.git"
-    "https://github.com/DOrtenzio/s-frontend-java-escapeCodeEx-infoLab.git"
-    "https://github.com/DOrtenzio/s-frontend-javaFx-calcolatriceComplessa-info.git"
-    "https://github.com/DOrtenzio/s-frontend-javaFX-calcolatrice-info.git"
+    "https://github.com/DOrtenzio/pratica1-24.git"
+    "https://github.com/DOrtenzio/pratica2-24.git"
+    "https://github.com/DOrtenzio/pratica3-24.git"
+    "https://github.com/DOrtenzio/pratica3.1-24.git"
+    "https://github.com/DOrtenzio/pratica4-24.git"
+    "https://github.com/DOrtenzio/pratica5-24.git"
+    "https://github.com/DOrtenzio/pratica6-24.git"
+    "https://github.com/DOrtenzio/pratica8-24.git"
+    "https://github.com/DOrtenzio/pratica9-24.git"
+    "https://github.com/DOrtenzio/pratica10-24.git"
+    "https://github.com/DOrtenzio/pratica11-24.git"
+    "https://github.com/DOrtenzio/pratica12-24.git"
+    "https://github.com/DOrtenzio/pratica13-24.git"
+    "https://github.com/DOrtenzio/pratica14-24.git"
+    "https://github.com/DOrtenzio/pratica15-24.git"
+    "https://github.com/DOrtenzio/js-timer.git"
+    "https://github.com/DOrtenzio/js-memory.git"
 )
 
 # Branch principale delle vecchie repo (solitamente 'main' o 'master')
